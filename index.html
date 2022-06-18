@@ -21,68 +21,50 @@
         <div id="search-container">
             <div id="search-bar">
                 <div class="input-group">
-                    <input type="search" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
-                    <button type="button" class="btn btn-outline-primary">search</button>
+                    <input type="search" class="form-control" id="search-meal-input" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                    <button type="button" class="btn btn-dark" id="search-btn">search</button>
                 </div>
             </div>
         </div>
 
 
         <div id="cards-container">
-            <div class="card" style="width: 18rem;">
-                <img src="./img/instant-noodles.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">FOOD title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-            <div class="card" style="width: 18rem;">
-                <img src="./img/instant-noodles.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">FOOD title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-            <div class="card" style="width: 18rem;">
-                <img src="./img/instant-noodles.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">FOOD title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-            <div class="card" style="width: 18rem;">
-                <img src="./img/instant-noodles.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">FOOD title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-            <div class="card" style="width: 18rem;">
-                <img src="./img/instant-noodles.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">FOOD title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-            <div class="card" style="width: 18rem;">
-                <img src="./img/instant-noodles.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">FOOD title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
 
-
+            <div class="card" style="width: 18rem;">
+                <img src="./img/instant-noodles.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">FOOD title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <button type="submit" class="btn btn-danger favourite-button"> + Favourite </button>
+                    
+                </div>
+            </div>
 
         </div>
+
+        <div id="meal-details">
+            <!-- Go Back Button -->
+            <button class="btn btn-sm btn-outline-danger back-button">
+              <i class="fas fa-arrow-circle-left"></i> &nbsp; Go Back
+            </button>
+            <div id="meal-details-container">
+              <!-- Structure of meal Details -->
+              <!-- <h2 class = "recipe-title">Title of Meal</h2>
+                    <div class = "recipe-instructions">
+                        <p>Intructions</p>
+                    </div>
+                    <div class = "recipe-meal-img">
+                        <img src = "" alt = "">
+                    </div>
+                    <div class = "recipe-link">
+                        <a href = "" target = "_blank">Watch Video</a>
+                    </div> -->
+            </div>
+          </div>
     </div>
 <!-- JavaScript Bundle with Popper  bootstrap-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+<script src="./script.js" type="text/JavaScript"></script>
 </body>
 </html>
