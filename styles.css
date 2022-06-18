@@ -1,0 +1,30 @@
+body{
+    background-color: #ed1212;
+}
+#navi{
+    background-color: #2b2b2b;
+    color: #ffc717;
+    /* padding-bottom: 5px; */
+    padding-left: 25px;
+}
+#navi span{
+    font-size: 40px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+
+#search-container{
+    display: flex;
+    justify-content: center;
+    height: 25vh;
+    width: 100vw;
+    background-color: #404040;
+    align-items: center;
+}
+#search-bar{
+    width: 33%;
+}
+
+#cards-container{
+    background-color: #ed1212;
+}
