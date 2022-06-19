@@ -1,6 +1,6 @@
-/* body{
+body{
     background: #ed1212;
-} */
+}
 
 #main-container{
     background: #e6e6e6;
@@ -52,4 +52,41 @@
     background-image: linear-gradient(to right bottom, #262626, #222222, #1f1f1f, #1b1b1b, #181818, #171717, #161616, #151515, #161616, #181818, #191919, #1a1a1a);
     box-shadow: 5px 5px 14px #000000;
     color: beige;
+}
+
+/* #meal-details{
+    height: 50%;
+    width: 50%;
+    background-color: rebeccapurple;
+    color: grey;
+    display: block;
+} */
+#meal-details {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: red;
+    border-radius: 10px;
+    width: 75%;
+    height: 75%;
+    overflow-y: scroll;
+    display: none;
+    padding: 2rem 0;
+    background-color: rgb(33, 37, 41);
+    padding: 20px;
+    z-index: 2;
+  }
+
+.show-recipe {
+    /* important used here to display the details page */
+    display: block !important;
+}
+
+.back-button {
+    margin-bottom: 20px;
+}
+.recipe-meal-img img{
+    height: 12rem;
+    width: 12rem;
 }
