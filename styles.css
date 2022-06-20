@@ -1,5 +1,7 @@
 body{
     font-family:sans-serif;
+    height: 100%;
+    background-color: #353535;
 }
 
 #main-container{
@@ -179,3 +181,20 @@ body{
     margin: 15px 10px 10px 10px;
 } */
 
+@media only screen and (max-width: 600px) {
+    #search-container{
+        height: 20vh;
+    }
+    #search-bar{
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    #search-container{
+        height: 35vh;
+    }
+    #search-bar{
+        width: 60%;
+    }
+}

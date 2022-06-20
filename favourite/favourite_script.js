@@ -2,7 +2,7 @@
 const favouriteMealContainer = document.getElementById("favourite-meals-container");
 const mealDetailsContainer = document.getElementById("meal-details-container");
 const backButton = document.getElementsByClassName("back-button")[0];
-
+const favMsg = document.getElementById("fav-msg");
 
 // Event Listeners
 document.addEventListener("DOMContentLoaded", getFavouriteMeals);
@@ -44,6 +44,8 @@ function addfavouriteMeals(meal, content) {
     </div>
     <button type="submit" class="btn btn-sm btn-outline-danger unfavourite-button">Remove</button>
     </div>`;
+    // To remove msg if there are favourite items
+    favMsg.setAttribute("style","display:none");
   favouriteMealContainer.innerHTML += content;
 }
 

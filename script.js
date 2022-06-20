@@ -69,7 +69,7 @@ function searchMealFunc() {
 // To display recipe details
 function getRecipeDetails(event) {
     if (event.target.classList.contains("recipe-button")) {
-      mainContainer.setAttribute('style','background-color:yellow')
+      // mainContainer.setAttribute('style','background-color:yellow')
       let mealItem = event.target.parentElement.parentElement;
       const mealId = mealItem.id;
       fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`)
@@ -97,7 +97,6 @@ function addRecipeDetail(meal) {
 
 // To close recipe details
 function closeRecipeDetails(){
-  mainContainer.setAttribute('style','background-color:#e6e6e6');
   mealDetailsContainer.parentElement.classList.remove("show-recipe");
 }
 
