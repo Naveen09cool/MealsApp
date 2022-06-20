@@ -20,8 +20,8 @@ function getFavouriteMeals() {
     favouriteMealsId = [];
     return;
   } else {
-    favouriteMealsId = [];
     favouriteMealsId = JSON.parse(localStorage.getItem("favourites"));
+    console.log("fffffffffffffff"+localStorage.getItem("favourites"));
   }
 
   let content = "";

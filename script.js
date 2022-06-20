@@ -14,6 +14,10 @@ backButton.addEventListener("click", closeRecipeDetails);
 resultCardsContainer.addEventListener("click", getRecipeDetails);
 resultCardsContainer.addEventListener("click", addToFavourites);
 
+// For clearing storage
+// function lic() {
+//   localStorage.clear();
+// }
 
 function searchMealFunc() {
     let searchText = searchTextElement.value;
@@ -109,8 +113,10 @@ function addToFavourites(event) {
 
   if (localStorage.getItem("favourites") === null) {
     favouriteMeals = [];
+    console.log("dddddddddd"+favouriteMeals);
   } else {
     favouriteMeals = JSON.parse(localStorage.getItem("favourites"));
+    console.log("scripttttt"+localStorage.getItem("favourites"));
   }
 
   // check if the mealId is already present
@@ -119,6 +125,9 @@ function addToFavourites(event) {
   }
   // add id to array and save it back to local storage
   favouriteMeals.push(mealId);
+  console.log("mealId"+mealId);
+  console.log("tttt"+favouriteMeals);
+
   localStorage.setItem("favourites", JSON.stringify(favouriteMeals));
 
   event.target.classList.remove("favourite-button");
