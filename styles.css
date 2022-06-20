@@ -1,5 +1,5 @@
 body{
-    background: #ed1212;
+    font-family:sans-serif;
 }
 
 #main-container{
@@ -16,9 +16,16 @@ body{
 }
 #navi span{
     font-size: 40px;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: 'Pacifico';
 }
-
+#favorite-meals-link{
+    float: right;
+    font-size: 22px;
+    border: 1px solid #fff;
+    margin-top: 10px;
+    padding: 2px 8px 2px 8px;
+    border-radius: 50px;
+}
 
 #search-container{
     display: flex;
@@ -26,11 +33,11 @@ body{
     height: 48vh;
     align-items: center;
 
-    background: url(./img/undraw_breakfast_psiw\ \(1\).svg);
-    background-attachment: scroll;
-    background-size: 43%;
+    background: url(./img/endless-constellation.svg);
+    background-attachment: fixed;
+    background-size: 100%;
     background-repeat:no-repeat;
-    background-position: 90% 8%;
+    /* background-position: 90% 8%; */
 }
 #search-bar{
     width: 33%;
@@ -40,20 +47,25 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background-color: #262626;
+    background-color: #353535;
     /* background-image: linear-gradient(to right bottom, #262626, #222222, #1f1f1f, #1b1b1b, #181818, #171717, #161616, #151515, #161616, #181818, #191919, #1a1a1a); */
     padding: 2rem;
     flex-wrap: wrap!important;
 }
 .card{
+    width: 18rem;
     display: block;
     margin: 20px;
     position: relative;
     background-image: linear-gradient(to right bottom, #262626, #222222, #1f1f1f, #1b1b1b, #181818, #171717, #161616, #151515, #161616, #181818, #191919, #1a1a1a);
-    box-shadow: 5px 5px 14px #000000;
+    box-shadow: 10px 12px 15px #000000;
+    border: 4px solid beige;
     color: beige;
 }
 
+/* .card img{
+    border: 2px solid whitesmoke;
+} */
 /* #meal-details{
     height: 50%;
     width: 50%;
@@ -63,19 +75,27 @@ body{
 } */
 #meal-details {
     position: fixed;
-    top: 50%;
+    top: 54%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: red;
-    border-radius: 10px;
+    color: #f0f0dd;
+    border-radius: 3px;
     width: 75%;
-    height: 75%;
+    height: 80%;
     overflow-y: scroll;
     display: none;
     padding: 2rem 0;
     background-color: rgb(33, 37, 41);
     padding: 20px;
+    box-shadow: 10px 12px 15px #000000;
     z-index: 2;
+  }
+#meal-details-container p{
+    text-align: justify;
+}
+.recipe-meal-img img {
+    float: left;
+    margin: 5px 10px 0px 5px;
   }
 
 .show-recipe {
@@ -101,4 +121,40 @@ body{
 #title {
     font-size: 1.7rem;
     color: beige !important;
+}
+
+.meal-items{
+    display: block;
+    margin: 20px;
+    position: relative;
+    background-image: linear-gradient(to right bottom, #262626, #222222, #1f1f1f, #1b1b1b, #181818, #171717, #161616, #151515, #161616, #181818, #191919, #1a1a1a);
+    box-shadow: 5px 5px 14px #000000;
+    color: beige;
+}
+#favourite-meals-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #353535;
+    /* background-image: linear-gradient(to right bottom, #262626, #222222, #1f1f1f, #1b1b1b, #181818, #171717, #161616, #151515, #161616, #181818, #191919, #1a1a1a); */
+    padding: 2rem;
+    flex-wrap: wrap!important;
+}
+#fav-banner{
+    display: flex;
+    justify-content: center;
+    height: 25vh;
+    align-items: center;
+    background: url(./img/endless-constellation.svg);
+    background-attachment: fixed;
+    /* background-size: 43%; */
+    /* background-repeat:no-repeat; */
+    /* background-position: 90% 8%; */
+}
+#fav-title{
+    color: #fff;
+    font-weight: 400;
+    font-size: 4rem;
+    text-shadow: 4px 4px 4px #000000;
+    position: fixed;
 }

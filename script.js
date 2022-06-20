@@ -33,7 +33,7 @@ function searchMealFunc() {
         data.meals.forEach((meal) => {
           list += `
           <div class="card" style="width: 18rem;" id = "${meal.idMeal}">
-              <img src="${meal.strMealThumb}" class="card-img-top" alt="...">
+              <img src="${meal.strMealThumb}" class="card-img-top" alt="Food Img">
               <div class="card-body">
                   <h5 class="card-title">${meal.strMeal}</h5>
                   <a href="#" class="btn btn-primary recipe-button">Get Recipe</a>
@@ -67,7 +67,6 @@ function getRecipeDetails(event) {
       mainContainer.setAttribute('style','background-color:yellow')
       let mealItem = event.target.parentElement.parentElement;
       const mealId = mealItem.id;
-      console.log(mealId);
       fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`)
       .then((response) => response.json())
       .then((data) => addRecipeDetail(data.meals[0]));
@@ -106,17 +105,13 @@ function addToFavourites(event) {
     return;
   }
 
-  console.log(event.target);
-
   let mealId = event.target.parentElement.id;
   let favouriteMeals;
 
   if (localStorage.getItem("favourites") === null) {
     favouriteMeals = [];
-    console.log("dddddddddd"+favouriteMeals);
   } else {
     favouriteMeals = JSON.parse(localStorage.getItem("favourites"));
-    console.log("scripttttt"+localStorage.getItem("favourites"));
   }
 
   // check if the mealId is already present
@@ -125,11 +120,7 @@ function addToFavourites(event) {
   }
   // add id to array and save it back to local storage
   favouriteMeals.push(mealId);
-  console.log("mealId"+mealId);
-  console.log("tttt"+favouriteMeals);
-
   localStorage.setItem("favourites", JSON.stringify(favouriteMeals));
-
   event.target.classList.remove("favourite-button");
   event.target.classList.remove("btn-outline-primary");
   event.target.classList.add("btn-danger");
