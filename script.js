@@ -83,11 +83,18 @@ function getRecipeDetails(event) {
 function addRecipeDetail(meal) {
   let content = `
     <h2 class = "recipe-title">${meal.strMeal}</h2>
+    <div class = "other-info">
+        <p><b>Origin: ${meal.strArea}</b></p>
+        <p><b>Category: ${meal.strCategory}</b></p>
+    </div>
     <div class = "recipe-meal-img">
         <img src = "${meal.strMealThumb}" alt = "">
     </div>
     <div class = "recipe-instructions">
         <p>${meal.strInstructions}</p>
+    </div>
+    <div class = "recipe-link">
+        <b><a href = "${meal.strYoutube}" target = "_blank">Watch Video</a></b>
     </div>
     `;
   mealDetailsContainer.innerHTML = content;

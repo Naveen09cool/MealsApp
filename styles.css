@@ -18,6 +18,9 @@ body{
     font-size: 40px;
     font-family: 'Pacifico';
 }
+#navi span:hover{
+    color: #ff7003;
+}
 
 /* Favorite Link in Navigation Bar */
 #favorite-meals-link{
