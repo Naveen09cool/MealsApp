@@ -90,3 +90,15 @@ body{
     height: 12rem;
     width: 12rem;
 }
+#favorite-meals-link {
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.5s ease-in-out;
+  }
+#favorite-meals-link:hover {
+    color: red;
+}
+#title {
+    font-size: 1.7rem;
+    color: beige !important;
+}
