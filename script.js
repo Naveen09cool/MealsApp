@@ -46,11 +46,11 @@ function searchMealFunc() {
 
           if(addedCheck){
             list += `
-              <button type="button" class="btn btn-sm btn-danger added-button"><a href="./favourite/favourite.html" style="text-decoration:none; color:inherit;"><i class="fa-solid fa-heart"></i> Added to Favourites</a></a></button>
+              <button type="button" class="btn btn-danger added-button"><a href="./favourite/favourite.html" style="text-decoration:none; color:inherit;"><i class="bi bi-heart-fill" style="color:#f0f0dd;"></i> Added to Favourites</a></a></button>
           </div>`;
           }
           else{
-            list += `<button type="submit" class="btn btn-danger favourite-button"> Add Favourite </button>
+            list += `<button type="submit" class="btn btn-outline-light favourite-button"><i class="bi bi-heart" style="color:#dc3545;"></i> Add Favourite </button>
           </div>`;
           }
         });
@@ -122,9 +122,10 @@ function addToFavourites(event) {
   favouriteMeals.push(mealId);
   localStorage.setItem("favourites", JSON.stringify(favouriteMeals));
   event.target.classList.remove("favourite-button");
-  event.target.classList.remove("btn-outline-primary");
+  event.target.classList.remove("btn-outline-light");
   event.target.classList.add("btn-danger");
   event.target.classList.add("added-button");
-  event.target.innerHTML = `<a  href="./favourite/favourite.html" style="text-decoration:none; color:inherit;"><i class="fa-solid fa-heart"></i> Added to Favourites</a></a>`;
+  event.target.innerHTML = `<a href="./favourite/favourite.html" style="text-decoration:none; color:inherit;"><i class="bi bi-heart-fill" style="color:#f0f0dd;"></i> Added to Favourites</a></a></button>`
+  // event.target.innerHTML = `<a  href="./favourite/favourite.html"><i class="bi bi-heart-fill" style="color:#f0f0dd;"></i> Added to Favourites</a></a>`;
 
 }
