@@ -4,10 +4,9 @@ const resultCardsContainer = document.getElementById("cards-container");
 const mealDetailsContainer = document.getElementById("meal-details-container");
 const backButton = document.getElementsByClassName("back-button")[0];
 const mainContainer  = document.getElementById("main-container");
-// const mealDetailsCard = document.getElementById("meal-details-card");
 
 
-// EVENTS For Seraching MEAL
+// EVENTS Listeners
 searchBtn.addEventListener("click", searchMealFunc);
 searchTextElement.addEventListener("input", searchMealFunc);
 backButton.addEventListener("click", closeRecipeDetails);
@@ -19,6 +18,8 @@ resultCardsContainer.addEventListener("click", addToFavourites);
 //   localStorage.clear();
 // }
 
+// Functions
+// Searching meals
 function searchMealFunc() {
     let searchText = searchTextElement.value;
     // Promise chaining
@@ -102,22 +103,18 @@ function closeRecipeDetails(){
 
 // add meals to favourites
 function addToFavourites(event) {
-  // check if user has clicked on favourite button
-
+// check if user has clicked on favourite button
   // if user has not clicked on favourite button just return
   if (!event.target.classList.contains("favourite-button")) {
     return;
   }
-
   let mealId = event.target.parentElement.id;
   let favouriteMeals;
-
   if (localStorage.getItem("favourites") === null) {
     favouriteMeals = [];
   } else {
     favouriteMeals = JSON.parse(localStorage.getItem("favourites"));
   }
-
   // check if the mealId is already present
   if (favouriteMeals.indexOf(mealId) !== -1) {
     return;
@@ -131,6 +128,4 @@ function addToFavourites(event) {
   event.target.classList.add("added-button");
   // Added to Favourites btn
   event.target.innerHTML = `<a href="./favourite/favourite.html" style="text-decoration:none; color:inherit;"><i class="bi bi-heart-fill" style="color:#f0f0dd;"></i> Favourite </a></a></button>`
-  // event.target.innerHTML = `<a  href="./favourite/favourite.html"><i class="bi bi-heart-fill" style="color:#f0f0dd;"></i> Added to Favourites</a></a>`;
-
 }

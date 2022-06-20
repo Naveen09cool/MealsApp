@@ -105,6 +105,5 @@ function addRecipeDetail(meal) {
 // To close recipe details
 function closeRecipeDetails() {
   // console.log("Back Clicked");
-  // location.href = '../index.html';
   mealDetailsContainer.parentElement.classList.remove("show-recipe");
 }
