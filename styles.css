@@ -20,11 +20,18 @@ body{
 }
 #favorite-meals-link{
     float: right;
-    font-size: 22px;
-    border: 1px solid #fff;
+    font-size: 18px;
+    border: 2px solid #f0f0dd;
     margin-top: 10px;
     padding: 2px 8px 2px 8px;
     border-radius: 50px;
+    text-decoration: none;
+    color: #1f1f1f;
+    background-color: #f0f0dd;
+  }
+#favorite-meals-link:hover {
+    color: #DC3545;
+    border: 2px solid #2b2b2b;
 }
 
 #search-container{
@@ -61,9 +68,11 @@ body{
     box-shadow: 10px 12px 15px #000000;
     border: 4px solid beige;
     color: beige;
+    text-align: center;
+    padding-bottom: 10px;
 }
 #msg-container{
-    font-family: 'Pacifico';
+    font-family:'Satisfy';
     height: 30vh;
     color: #f0f0dd;
     margin-top: 10%;
@@ -116,14 +125,8 @@ body{
     height: 12rem;
     width: 12rem;
 }
-#favorite-meals-link {
-    text-decoration: none;
-    color: #fff;
-    transition: all 0.5s ease-in-out;
-  }
-#favorite-meals-link:hover {
-    color: red;
-}
+
+
 #title {
     font-size: 1.7rem;
     color: beige !important;
@@ -136,6 +139,7 @@ body{
     background-image: linear-gradient(to right bottom, #262626, #222222, #1f1f1f, #1b1b1b, #181818, #171717, #161616, #151515, #161616, #181818, #191919, #1a1a1a);
     box-shadow: 5px 5px 14px #000000;
     color: beige;
+    width: 18rem;
 }
 #favourite-meals-container{
     display: flex;
@@ -158,9 +162,22 @@ body{
     /* background-position: 90% 8%; */
 }
 #fav-title{
+    font-family: 'Satisfy';
     color: #fff;
     font-weight: 400;
     font-size: 4rem;
     text-shadow: 4px 4px 4px #000000;
-    position: fixed;
+}
+/* .unfavourite-button{
+    margin: 15px 10px 10px 10px;
+} */
+.meal-name{
+    margin: 20px 10px 10px 10px;
+}
+#fav-msg{
+    /* font-family: 'Pacifico'; */
+    height: 40vh;
+    color: #f0f0dd;
+    margin-top: 10%;
+    font-family: 'Satisfy';
 }

@@ -32,7 +32,7 @@ function searchMealFunc() {
         // loop over every meal and add it to the list
         data.meals.forEach((meal) => {
           list += `
-          <div class="card" style="width: 18rem;" id = "${meal.idMeal}">
+          <div class="card" id = "${meal.idMeal}">
               <img src="${meal.strMealThumb}" class="card-img-top" alt="Food Img">
               <div class="card-body">
                   <h5 class="card-title">${meal.strMeal}</h5>
@@ -45,12 +45,16 @@ function searchMealFunc() {
             addedCheck = favs.includes(meal.idMeal);
 
           if(addedCheck){
+            // Added to Favourites btn
             list += `
-              <button type="button" class="btn btn-danger added-button"><a href="./favourite/favourite.html" style="text-decoration:none; color:inherit;"><i class="bi bi-heart-fill" style="color:#f0f0dd;"></i> Added to Favourites</a></a></button>
-          </div>`;
+              <button type="button" class="btn btn-danger added-button"><a href="./favourite/favourite.html" style="text-decoration:none; color:inherit;"><i class="bi bi-heart-fill" style="color:#f0f0dd;"></i> Favourite</a></a></button>
+              </div>
+            </div>`;
           }
+          // Add Favourite
           else{
-            list += `<button type="submit" class="btn btn-outline-light favourite-button"><i class="bi bi-heart" style="color:#dc3545;"></i> Add Favourite </button>
+            list += `<button type="submit" class="btn btn-light favourite-button"><i class="bi bi-heart" style="color:#dc3545;"></i> +Favourite </button>
+            </div>
           </div>`;
           }
         });
@@ -122,10 +126,11 @@ function addToFavourites(event) {
   favouriteMeals.push(mealId);
   localStorage.setItem("favourites", JSON.stringify(favouriteMeals));
   event.target.classList.remove("favourite-button");
-  event.target.classList.remove("btn-outline-light");
+  event.target.classList.remove("btn-light");
   event.target.classList.add("btn-danger");
   event.target.classList.add("added-button");
-  event.target.innerHTML = `<a href="./favourite/favourite.html" style="text-decoration:none; color:inherit;"><i class="bi bi-heart-fill" style="color:#f0f0dd;"></i> Added to Favourites</a></a></button>`
+  // Added to Favourites btn
+  event.target.innerHTML = `<a href="./favourite/favourite.html" style="text-decoration:none; color:inherit;"><i class="bi bi-heart-fill" style="color:#f0f0dd;"></i> Favourite </a></a></button>`
   // event.target.innerHTML = `<a  href="./favourite/favourite.html"><i class="bi bi-heart-fill" style="color:#f0f0dd;"></i> Added to Favourites</a></a>`;
 
 }

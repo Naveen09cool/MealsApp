@@ -39,7 +39,7 @@ function addfavouriteMeals(meal, content) {
         <img src = "${meal.strMealThumb}" class="card-img-top" alt = "food">
     </div>
     <div class = "meal-name">
-        <h3>${meal.strMeal}</h3>
+        <h5>${meal.strMeal}</h5>
         <a href = "#" class = "btn btn-primary recipe-button">Get Recipe</a>
     </div>
     <button type="submit" class="btn btn-sm btn-outline-danger unfavourite-button">Remove</button>

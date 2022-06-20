@@ -4,23 +4,24 @@
     <!-- Required meta tags -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Bootstrap CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- BootStrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-
-    <!-- Google Fonts -->
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css" integrity="sha384-eoTu3+HydHRBIjnCVwsFyCpUDZHZSFKEJD0mc3ZqSBSb6YhZzRHeiomAUWCstIWo" crossorigin="anonymous">
+    <!-- GOOGLE fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <!-- CSS -->
     <link rel="stylesheet" href="../styles.css" />
     <title>Favourite Meals</title>
   </head>
   <body>
     
 
-    <main class="main-container">
+    <div class="main-container">
       <div id="navi">
         <div class="container-fluid">
             <a class="navbar-brand" href="../index.html"><span>Meal</span></a>
@@ -30,7 +31,10 @@
       <div id="fav-banner">
         <h1 id="fav-title">Favourite Meals</h1>
       </div>
-      <div id="favourite-meals-container"class="d-flex flex-wrap flex-row align-items-center justify-content-center">
+      <div id="favourite-meals-container" >
+        <div id="fav-msg">
+          <h1>No favourites yet!</h1>
+        </div>
         <!-- structure of meal item -->
         <!-- <div class = "meal-item">
             <div class = "meal-img">
@@ -66,7 +70,7 @@
       </div>
 
 
-    </main>
+    </div>
     <!-- Bootstrap scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <script src="./favourite_script.js"></script>
